@@ -7,6 +7,10 @@ from tkinter import Tk
 # Then we import OS to work with file names and file sizes
 import os
 
+# Import datetime to work with dates
+from datetime import datetime
+today = datetime.now()
+
 # Create a Tkinter root object for working with file selection
 root = Tk()
 root.withdraw() 
@@ -39,16 +43,20 @@ with open('AllText\TrainingText.txt', 'r', encoding='utf-8') as training_text:
     training_text=training_text.read()
     training_text_word_count = len(training_text.split())
     training_text_character_count = len(training_text)
-    training_text_size = os.path.getsize(training_text)
+    training_text_size = os.path.getsize('AllText\TrainingText.txt')
 
 # Create variables to update the word count and the character count in the readme summary file
-new_character_count = (f'Current Character Count: {training_text_character_count}')
-new_word_count = (f'Current Word Count: {training_text_word_count}')
+new_character_count = (f'Current Character Count: {training_text_character_count:,}')
+new_word_count = (f'Current Word Count: {training_text_word_count:,}')
+new_file_size = (f'Current File Size: {training_text_size} bytes')
+last_modified = (f'Latest data added: {today}')
 
 # Insert the new character count
-read_me_file=(f' FreeLLMText: A repository that stores high quality, copyright-free text for LLM training \n \n \n{new_character_count} \n {new_word_count}')
+read_me_file=(f'FreeLLMText: A repository that stores high quality, copyright-free text for LLM training \n \n \n{new_character_count} \n{new_word_count} \n{new_file_size} \n{last_modified}')
 
 
 # Write the changes to the file
 with open('README.md', 'w', encoding='utf-8') as file:
     file.write(read_me_file)
+
+print(f'Data loaded, readme updated')
