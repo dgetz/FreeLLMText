@@ -52,7 +52,7 @@ new_file_size = (f'Current File Size: {training_text_size} bytes')
 last_modified = (f'Latest data added: {today}')
 
 # Insert the new character count
-read_me_file=(f'FreeLLMText: A repository that stores high quality, copyright-free text for LLM training \n \n \n{new_character_count} \n{new_word_count} \n{new_file_size} \n{last_modified}')
+read_me_file=(f'FreeLLMText: A repository that stores high quality, copyright-free text for LLM training \n \n \n {new_character_count} \n {new_word_count} \n {new_file_size} \n {last_modified}')
 
 
 # Write the changes to the file
@@ -60,3 +60,10 @@ with open('README.md', 'w', encoding='utf-8') as file:
     file.write(read_me_file)
 
 print(f'Data loaded, readme updated')
+
+## TODO
+# Find a way to check for duplicate data
+# Delete prevention
+# List the files that have been written
+# Create Metadata
+# Move the appended files to a new folder
