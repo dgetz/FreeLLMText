@@ -1,5 +1,5 @@
-# FreeLLMText
-A repository that stores high quality, copyright-free, categorized text for LLM training
-
-Current Character Count:
-Current Word Count:
+ FreeLLMText: A repository that stores high quality, copyright-free text for LLM training 
+ 
+ 
+Current Character Count: 5147886 
+ Current Word Count: 5147886
