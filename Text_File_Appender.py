@@ -60,6 +60,7 @@ with open('README.md', 'w', encoding='utf-8') as file:
     file.write(read_me_file)
 
 print(f'Data loaded, readme updated')
+print(f'New size is {training_text_size} bytes')
 
 ## TODO
 # Find a way to check for duplicate data
