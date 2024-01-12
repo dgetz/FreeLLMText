@@ -59,8 +59,9 @@ read_me_file=(f'FreeLLMText: A repository that stores high quality, copyright-fr
 with open('README.md', 'w', encoding='utf-8') as file:
     file.write(read_me_file)
 
-print(f'Data loaded, readme updated')
+print(f'Data loaded, README updated')
 print(f'New size is {training_text_size} bytes')
+print(f'New Word Count: {training_text_word_count:,} words')
 
 ## TODO
 # Find a way to check for duplicate data
