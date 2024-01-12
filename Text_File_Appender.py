@@ -7,6 +7,9 @@ from tkinter import Tk
 # Then we import OS to work with file names and file sizes
 import os
 
+#import shutil to move files around
+import shutil
+
 # Import datetime to work with dates
 from datetime import datetime
 today = datetime.now()
@@ -53,7 +56,6 @@ last_modified = (f'Latest data added: {today}')
 
 # Insert the new character count
 read_me_file=(f'FreeLLMText: A repository that stores high quality, copyright-free text for LLM training \n \n \n {new_character_count} \n {new_word_count} \n {new_file_size} \n {last_modified}')
-
 
 # Write the changes to the file
 with open('README.md', 'w', encoding='utf-8') as file:
