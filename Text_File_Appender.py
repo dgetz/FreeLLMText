@@ -1,16 +1,12 @@
 # This script appends txt files to the master text file
 
-# First we import the tkinter tools for opening file dialogues
+#Import the tkinter tools for opening file dialogues, os for file reading, writing
+#Import Shutil to move
+# Import datetime to work with dates
 from tkinter import filedialog
 from tkinter import Tk
-
-# Then we import OS to work with file names and file sizes
 import os
-
-#import shutil to move files around
 import shutil
-
-# Import datetime to work with dates
 from datetime import datetime
 today = datetime.now()
 
@@ -18,10 +14,8 @@ today = datetime.now()
 root = Tk()
 root.withdraw() 
 
-# Open a dialog for file selection
+# Open a dialog for file selection and convert the returned tuple of file paths to a list
 file_paths = filedialog.askopenfilenames(title="Select book text file(s)")
-
-# Convert the returned tuple of file paths to a list
 file_paths = list(file_paths)
 
 # Create a for loop to work through the file paths and append the values to the 
@@ -40,6 +34,13 @@ for index, file in enumerate(file_paths,start=1):
     
     #print out the results as they finish appending
     print(f'{index}. {file} is done')
+
+    #Move the files from 'ToBeUploaded' folder to 'Complete' folder
+    file_path_index = index-1
+    new_path = "C:\\Users\\Dan\\Documents\\LLMDownloads\\Complete"
+    shutil.move(file_paths[file_path_index],new_path)
+    #print(f'File Path number {file_path_index} was moved')
+    
 
 # Read the total training text file and get a word count and character count
 with open('AllText\TrainingText.txt', 'r', encoding='utf-8') as training_text:
@@ -70,4 +71,3 @@ print(f'New Word Count: {training_text_word_count:,} words')
 # Delete prevention
 # List the files that have been written
 # Create Metadata
-# Move the appended files to a new folder
