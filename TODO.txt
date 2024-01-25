@@ -1,0 +1,19 @@
+###### Todo list for Free LLM
+
+Permanent Tasks
+-Copy and Categorize Text Files into subcategories for specific training projects
+-Find more copyright free text files and append them to the repository
+
+Major Undecided Architectural Choices
+-Define better metadata strategy
+	-Author
+	-Categories
+	-Year published
+	-Content Type
+	-Source
+	
+- Define standards for processing text, spacing
+
+One off Todos
+-Check for duplicate data (don't upload the same text twice)
+-Create a list of all of the written files
