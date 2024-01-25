@@ -50,9 +50,9 @@ with open('AllText\TrainingText.txt', 'r', encoding='utf-8') as training_text:
     training_text_size = os.path.getsize('AllText\TrainingText.txt')
 
 # Create variables to update the word count and the character count in the readme summary file
-new_character_count = (f'Current Character Count: {training_text_character_count:,}')
-new_word_count = (f'Current Word Count: {training_text_word_count:,}')
-new_file_size = (f'Current File Size: {training_text_size} bytes')
+new_character_count = (f'Current Character Count: {training_text_character_count:,}\n')
+new_word_count = (f'Current Word Count: {training_text_word_count:,}\n')
+new_file_size = (f'Current File Size: {training_text_size} bytes\n')
 last_modified = (f'Latest data added: {today}')
 
 # Insert the new character count
