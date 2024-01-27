@@ -27,6 +27,9 @@ for index, file in enumerate(file_paths,start=1):
     
     # Open the destination file and append the content of the source file
     with open('AllText\TrainingText.txt', 'a', encoding='utf-8') as dest_file:
+        # Add a newline before appending content, except for the first file
+        if index > 1:
+            dest_file.write('\n')  
         dest_file.write(content)
         
     # Rename the file with an easier to read basename   
