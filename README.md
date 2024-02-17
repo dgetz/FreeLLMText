@@ -1,10 +1,10 @@
 FreeLLMText: A repository that stores high quality, copyright-free text for LLM training 
  
  
- Current Character Count: 37,257,672
+ Current Character Count: 39,299,431
  
- Current Word Count: 6,566,273
+ Current Word Count: 6,946,318
  
- Current File Size: 38414672 bytes
+ Current File Size: 40544257 bytes
  
- Latest data added: 2024-02-05 21:44:56.373601
+ Latest data added: 2024-02-17 10:00:47.074789
